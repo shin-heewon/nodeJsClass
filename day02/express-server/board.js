@@ -6,6 +6,16 @@ let posts = []; // 게시글 리스트로 사용할  posts에 빈 리스트 할�
 //req.body를 사용하려면 JSON  미들웨어를 사용해야 한다.
 app.use(express.json()); // JSON 미들웨어 활성화
 
+
+/**Express에서 POST 요청으로 보내진 JSON 형식의 데이터를 파싱하여 req.body로 접근할 수 있도록 돕는 미들웨어입니다. 이를 통해 클라이언트가 서버로 전송한 JSON 데이터를 처리할 수 있습니다.
+express.json()에 대한 설명
+클라이언트가 POST 요청을 보낼 때, 그 요청 본문에 JSON 형식의 데이터를 담을 수 있습니다.
+이 데이터를 서버가 처리하려면, JSON을 객체로 변환해야 합니다. express.json() 미들웨어가 이를 자동으로 처리해 주어, req.body로 데이터에 접근할 수 있게 해줍니다. */
+
+
+
+
+
 //POST 요청할 때 컨텐트 타입이 application/x-www.form-urlencode 인 경우 파싱
 app.use(express.urlencoded({extended : true}));//확장하여 미들웨어와 함께 쓰겠다~
 
